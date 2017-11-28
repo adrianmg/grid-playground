@@ -2,26 +2,35 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   font-size: 1.4rem;
   font-family: sans-serif;
   background: #FCFCFC;
 }
+
 .wrapper {
-  width: 996px;
+  max-width: 996px;
+  background: pink;
   margin: 48px auto;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 300px);
-  grid-column-gap:  48px;
-  grid-row-gap:     48px;
+  grid-column-gap: 48px;
+  grid-row-gap: 48px;
 }
-  .box {
-    /*max-width: 300px;*/
-    height: 220px;
-    background: #EDEFF2;
-    border-radius: 2px;
+
+.box {
+  height: 220px;
+  background: #EDEFF2;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 996px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
   }
+}
